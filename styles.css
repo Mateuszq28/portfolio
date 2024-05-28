@@ -222,6 +222,24 @@ nav .right a span {
   margin-bottom: 1em;
 }
 
+.projects-section .group .text .collapse{
+  display: block;
+  text-align: left;
+  text-indent: 2em;
+  margin-bottom: 1em;
+  margin-top: 0em;
+  color: var(--link-color);
+}
+
+.projects-section .group .text .collapse i{
+  /* padding-left: -2ch; */
+  margin: -1em;
+}
+
+.projects-section .group .text .collapse:hover {
+  color: var(--text-color);
+}
+
 .projects-section .group .text .links {
   margin-top: 15px;
 }

@@ -47,7 +47,7 @@ var i;
 
 for (i = 0; i < hid_but_.length; i++) {
   hid_but_[i].addEventListener("click", function() {
-    var coll = this.parentNode.firstChild;
+    var coll = this.parentNode.firstElementChild;
     var hid_but = this;
     var content = hid_but.nextElementSibling;
     // var hid_but2 = content.nextElementSibling;
@@ -73,7 +73,7 @@ var i;
 for (i = 0; i < hid_but2_.length; i++) {
   hid_but2_[i].addEventListener("click", function() {
     var hid_but2 = this;
-    var coll = hid_but2.parentNode.parentNode.firstChild;
+    var coll = hid_but2.parentNode.parentNode.firstElementChild;
     var hid_but = coll.nextElementSibling;
     var content = hid_but.nextElementSibling;
 

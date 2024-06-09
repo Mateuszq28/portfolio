@@ -223,7 +223,7 @@ nav .right a span {
   margin-bottom: 1em;
 }
 
-.collapse, .hid_but, .hid_but2{
+.red_mor, .hid_but, .hid_but2{
   all: unset;
   cursor: pointer;
   display: block;
@@ -234,25 +234,25 @@ nav .right a span {
   color: var(--link-color);
 }
 
-.collapse_content{
+.coll_content{
   display: block;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
 
-.collapse i, .hid_but i, .hid_but2 i {
+.red_mor i, .hid_but i, .hid_but2 i {
   /* padding-left: -2ch; */
   margin: -1em;
 }
 
-.collapse:hover, .hid_but:hover, .hid_but2:hover {
-  /* color: var(--text-color); */
+.red_mor:hover, .hid_but:hover, .hid_but2:hover {
+  color: var(--text-color);
   /* color: red; */
-  color: var(--more-hover);
+  /* color: var(--more-hover); */
 }
 
-.col_active, .hid_but_hidden, .hid_but2_hidden {
+.red_mor_hidden, .hid_but_hidden, .hid_but2_hidden {
   all: unset;
   cursor: pointer;
   display: none;

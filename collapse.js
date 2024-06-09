@@ -1,10 +1,10 @@
 // without animation
-// var coll = document.getElementsByClassName("collapse");
+// var coll = document.getElementsByClassName("red_mor");
 // var i;
 
 // for (i = 0; i < coll.length; i++) {
 //     coll[i].addEventListener("click", function() {
-//     this.classList.toggle("col_active");
+//     this.classList.toggle("red_mor_hidden");
 //     var content = this.nextElementSibling;
 //     if (content.style.display === "block") {
 //         content.style.display = "none";
@@ -17,7 +17,7 @@
 
 
 // with animation
-var coll_ = document.getElementsByClassName("collapse");
+var coll_ = document.getElementsByClassName("red_mor");
 var i;
 
 for (i = 0; i < coll_.length; i++) {
@@ -27,9 +27,9 @@ for (i = 0; i < coll_.length; i++) {
     var content = hid_but.nextElementSibling;
     // var hid_but2 = content.nextElementSibling;
 
-    coll.classList.remove("collapse");
-    coll.classList.add("col_active");
-    hid_but.classList.remove("hid_button_hidden");
+    coll.classList.remove("red_mor");
+    coll.classList.add("red_mor_hidden");
+    hid_but.classList.remove("hid_but_hidden");
     hid_but.classList.add("hid_but");
     // hid_but2.classList.toggle("hid_but2");
     
@@ -42,7 +42,7 @@ for (i = 0; i < coll_.length; i++) {
 }
 
 
-var hid_but_ = document.getElementsByClassName("hid_but");
+var hid_but_ = document.getElementsByClassName("hid_but_hidden");
 var i;
 
 for (i = 0; i < hid_but_.length; i++) {
@@ -52,8 +52,8 @@ for (i = 0; i < hid_but_.length; i++) {
     var content = hid_but.nextElementSibling;
     // var hid_but2 = content.nextElementSibling;
 
-    coll.classList.remove("col_active");
-    coll.classList.add("collapse");
+    coll.classList.remove("red_mor_hidden");
+    coll.classList.add("red_mor");
     hid_but.classList.remove("hid_but");
     hid_but.classList.add("hid_but_hidden");
     // hid_but2.classList.toggle("hid_but2_hidden");
@@ -77,8 +77,8 @@ for (i = 0; i < hid_but2_.length; i++) {
     var hid_but = coll.nextElementSibling;
     var content = hid_but.nextElementSibling;
 
-    coll.classList.remove("col_active");
-    coll.classList.add("collapse");
+    coll.classList.remove("red_mor_hidden");
+    coll.classList.add("red_mor");
     hid_but.classList.remove("hid_but");
     hid_but.classList.add("hid_but_hidden");
     // hid_but2.classList.toggle("hid_but2_hidden");

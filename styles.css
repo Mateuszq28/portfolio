@@ -2,6 +2,7 @@
   --text-color: #1a1c20;
   --link-color: #4a76ee;
   --background-color: #eeeff1;
+  --more-hover: #ecc06f
 }
 
 * {
@@ -222,7 +223,9 @@ nav .right a span {
   margin-bottom: 1em;
 }
 
-.projects-section .group .text .collapse{
+.collapse, .hid_but, .hid_but2{
+  all: unset;
+  cursor: pointer;
   display: block;
   text-align: left;
   text-indent: 2em;
@@ -231,13 +234,33 @@ nav .right a span {
   color: var(--link-color);
 }
 
-.projects-section .group .text .collapse i{
+.collapse_content{
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapse i{
   /* padding-left: -2ch; */
   margin: -1em;
 }
 
-.projects-section .group .text .collapse:hover {
-  color: var(--text-color);
+.collapse:hover, .hid_but:hover, .hid_but2_hidden:hover{
+  /* color: var(--text-color); */
+  /* color: red; */
+  color: var(--more-hover);
+}
+
+.col_active, .hid_but_hidden, .hid_but2_hidden {
+  all: unset;
+  cursor: pointer;
+  display: none;
+  text-align: left;
+  text-indent: 2em;
+  margin-bottom: 1em;
+  margin-top: 0em;
+  color: var(--link-color);
 }
 
 .projects-section .group .text .links {

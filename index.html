@@ -11,9 +11,9 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet" href="styles.css">
+  <!-- <script src="jquery-3.7.1.min.js"></script> -->
 
-  <script src="collapse.js"></script>
+  <link rel="stylesheet" href="styles.css">
 
   <title>Portfolio</title>
 </head>
@@ -198,10 +198,24 @@
                 </a>
             </div>
 
-            <a class="collapse" href="google.com">
+            <div class="read_more">
+              <button type="button" class="collapse">
                 read more
                 <i class="fa-solid fa-angles-down"></i>
-            </a>
+              </button>
+              <button type="button" class="hid_but_hidden">
+                hide
+                <i class="fa-solid fa-angles-up"></i>
+              </button>
+              <div class="collapse_content">
+                  <p>My friend was wondering how to speed up the process of checking the cards of orienteering participants (INO) and at the same time meet covid-19 restrictions. We together agreed that the best solution would be a smartphone application that uses a camera to scan QR codes. It was <nobr>a great</nobr> substitute for colored pencils that would be touched by all participants to write down codes from lanterns hidden in the forest. Since my friend has no knowledge of programming, I wrote the application and he organized the sporting event.</p>
+                  <button type="button" class="hid_but2">
+                    hide
+                    <i class="fa-solid fa-angles-up"></i>
+                  </button>
+              </div>
+            </div>
+
             </div>
         </div>
     </section>
@@ -236,5 +250,6 @@
     </section>
 
   </main>
+  <script src="collapse.js"></script>
 </body>
 </html>

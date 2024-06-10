@@ -15,6 +15,13 @@
 // }
 
 
+// 2-way switch
+// if (content.style.maxHeight){
+//   content.style.maxHeight = null;
+// } else {
+//   content.style.maxHeight = content.scrollHeight + "px";
+// }
+
 
 // with animation
 var coll_ = document.getElementsByClassName("red_mor");
@@ -33,11 +40,7 @@ for (i = 0; i < coll_.length; i++) {
     hid_but.classList.add("hid_but");
     // hid_but2.classList.toggle("hid_but2");
     
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
+    content.style.maxHeight = content.scrollHeight + "px";
   });
 }
 
@@ -58,11 +61,7 @@ for (i = 0; i < hid_but_.length; i++) {
     hid_but.classList.add("hid_but_hidden");
     // hid_but2.classList.toggle("hid_but2_hidden");
 
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
+    content.style.maxHeight = null;
   });
 }
 
@@ -83,10 +82,6 @@ for (i = 0; i < hid_but2_.length; i++) {
     hid_but.classList.add("hid_but_hidden");
     // hid_but2.classList.toggle("hid_but2_hidden");
 
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
+    content.style.maxHeight = null;
   });
 }

@@ -346,10 +346,12 @@ nav .right a span {
   cursor: pointer;
   display: block;
   text-align: left;
-  text-indent: 2em;
   margin-bottom: 1em;
   margin-top: 0em;
   color: var(--link-color);
+  opacity: 1;
+  text-indent: 2em;
+  transition: opacity 0.5s ease-in-out, text-indent 0.5s ease-in-out;
 }
 
 .coll_content{
@@ -373,12 +375,14 @@ nav .right a span {
 .red_mor_hidden, .hid_but_hidden, .hid_but2_hidden {
   all: unset;
   cursor: pointer;
-  display: none;
+  display: block;
   text-align: left;
-  text-indent: 2em;
-  margin-bottom: 1em;
-  margin-top: 0em;
   color: var(--link-color);
+  opacity: 0;
+  text-indent: 10em;
+  height: 0px;
+  margin: 0px;
+  transition: opacity 0.5s ease-in-out, text-indent 0.5s ease-in-out;
 }
 
 .projects-section .group .text .links {

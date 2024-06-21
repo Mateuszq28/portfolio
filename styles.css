@@ -380,7 +380,7 @@ nav .right a span {
   color: var(--link-color);
   opacity: 0;
   text-indent: 10em;
-  height: 0px;
+  /* height: 0px; */
   margin: 0px;
   transition: opacity 0.5s ease-in-out, text-indent 0.5s ease-in-out;
 }
@@ -393,7 +393,7 @@ nav .right a span {
   color: var(--link-color);
   opacity: 0;
   text-indent: 10em;
-  height: 0px;
+  /* height: 0px; */
   margin: 0px;
 }
 

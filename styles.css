@@ -374,7 +374,7 @@ nav .right a span {
 
 .red_mor_hidden, .hid_but_hidden, .hid_but2_hidden {
   all: unset;
-  cursor: pointer;
+  cursor: default;
   display: block;
   text-align: left;
   color: var(--link-color);
@@ -387,7 +387,7 @@ nav .right a span {
 
 .red_mor_gone, .hid_but_gone, .hid_but2_gone {
   all: unset;
-  cursor: pointer;
+  cursor: default;
   display: none;
   text-align: left;
   color: var(--link-color);

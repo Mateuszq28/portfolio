@@ -14,7 +14,7 @@
 //     });
 // }
 
-var wait_time = 500;
+var wait_time = 300;
 
 function change_class(elem, from_c, to_c) {
   elem.classList.remove(from_c);
@@ -46,13 +46,12 @@ for (i = 0; i < coll_.length; i++) {
 
     setTimeout(function() {
       change_class(coll, "red_mor_hidden", "red_mor_gone")
+      change_class(hid_but, "hid_but_gone", "hid_but_hidden");
     }, wait_time);
-    
-    change_class(hid_but, "hid_but_gone", "hid_but_hidden");
     
     setTimeout(function() {
       change_class(hid_but, "hid_but_hidden", "hid_but");
-    }, wait_time);
+    }, wait_time*2);
     
     content_roller(content);
   });
@@ -73,13 +72,12 @@ for (i = 0; i < hid_but_.length; i++) {
     
     setTimeout(function() {
       change_class(hid_but, "hid_but_hidden", "hid_but_gone")
+      change_class(coll, "red_mor_gone", "red_mor_hidden");
     }, wait_time);
-    
-    change_class(coll, "red_mor_gone", "red_mor_hidden");
     
     setTimeout(function() {
       change_class(coll, "red_mor_hidden", "red_mor");
-    }, wait_time);
+    }, wait_time*2);
 
     content_roller(content);
   });
@@ -100,13 +98,12 @@ for (i = 0; i < hid_but2_.length; i++) {
     
     setTimeout(function() {
       change_class(hid_but, "hid_but_hidden", "hid_but_gone")
+      change_class(coll, "red_mor_gone", "red_mor_hidden");
     }, wait_time);
-    
-    change_class(coll, "red_mor_gone", "red_mor_hidden");
     
     setTimeout(function() {
       change_class(coll, "red_mor_hidden", "red_mor");
-    }, wait_time);
+    }, wait_time*2);
 
     content_roller(content);
   });

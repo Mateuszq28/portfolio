@@ -43,11 +43,14 @@ for (i = 0; i < coll_.length; i++) {
     // var hid_but2 = content.nextElementSibling;
     
     change_class(coll, "red_mor", "red_mor_hidden");
+
+    setTimeout(function() {
+      change_class(coll, "red_mor_hidden", "red_mor_gone")
+    }, wait_time);
     
     change_class(hid_but, "hid_but_gone", "hid_but_hidden");
     
     setTimeout(function() {
-      change_class(coll, "red_mor_hidden", "red_mor_gone")
       change_class(hid_but, "hid_but_hidden", "hid_but");
     }, wait_time);
     
@@ -68,11 +71,14 @@ for (i = 0; i < hid_but_.length; i++) {
     
     change_class(hid_but, "hid_but", "hid_but_hidden");
     
+    setTimeout(function() {
+      change_class(hid_but, "hid_but_hidden", "hid_but_gone")
+    }, wait_time);
+    
     change_class(coll, "red_mor_gone", "red_mor_hidden");
     
     setTimeout(function() {
       change_class(coll, "red_mor_hidden", "red_mor");
-      change_class(hid_but, "hid_but_hidden", "hid_but_gone")
     }, wait_time);
 
     content_roller(content);
@@ -92,11 +98,14 @@ for (i = 0; i < hid_but2_.length; i++) {
     
     change_class(hid_but, "hid_but", "hid_but_hidden");
     
+    setTimeout(function() {
+      change_class(hid_but, "hid_but_hidden", "hid_but_gone")
+    }, wait_time);
+    
     change_class(coll, "red_mor_gone", "red_mor_hidden");
     
     setTimeout(function() {
       change_class(coll, "red_mor_hidden", "red_mor");
-      change_class(hid_but, "hid_but_hidden", "hid_but_gone")
     }, wait_time);
 
     content_roller(content);

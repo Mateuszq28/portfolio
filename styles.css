@@ -358,7 +358,7 @@ nav .right a span {
   display: block;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.5s ease-out;
 }
 
 .red_mor i, .hid_but i, .hid_but2 i {
@@ -375,6 +375,7 @@ nav .right a span {
 .red_mor_hidden, .hid_but_hidden, .hid_but2_hidden {
   all: unset;
   cursor: default;
+  pointer-events: none;
   display: block;
   text-align: left;
   color: var(--link-color);
@@ -388,6 +389,7 @@ nav .right a span {
 .red_mor_gone, .hid_but_gone, .hid_but2_gone {
   all: unset;
   cursor: default;
+  pointer-events: none;
   display: none;
   text-align: left;
   color: var(--link-color);

@@ -385,6 +385,18 @@ nav .right a span {
   transition: opacity 0.5s ease-in-out, text-indent 0.5s ease-in-out;
 }
 
+.red_mor_gone, .hid_but_gone, .hid_but2_gone {
+  all: unset;
+  cursor: pointer;
+  display: none;
+  text-align: left;
+  color: var(--link-color);
+  opacity: 0;
+  text-indent: 10em;
+  height: 0px;
+  margin: 0px;
+}
+
 .projects-section .group .text .links {
   margin-top: 15px;
 }

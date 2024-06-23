@@ -1,6 +1,7 @@
 :root {
   --text-color: #1a1c20;
-  --link-color: #4a76ee;
+  --link-color: #df692d;
+  /* --link-color: #4a76ee; */
   --background-color: #eeeff1;
   --more-hover: #ecc06f;
   --collapse-margin-bottom: 6px;
@@ -8,7 +9,7 @@
   --collapse-content-time: 0.3s;
   --collapse-button-time: 0.3s;
   --collapse-button-pad-anim: 0%;
-  --collapse-button-text-indent-anim: 5em;
+  --collapse-button-text-indent-anim: 7em;
 }
 
 * {

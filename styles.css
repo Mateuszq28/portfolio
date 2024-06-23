@@ -7,6 +7,8 @@
   --collapse-margin-top: 0px;
   --collapse-content-time: 0.3s;
   --collapse-button-time: 0.3s;
+  --collapse-button-pad-anim: 0%;
+  --collapse-button-text-indent-anim: 8em;
 }
 
 * {
@@ -355,7 +357,8 @@ nav .right a span {
   color: var(--link-color);
   opacity: 1;
   text-indent: 2em;
-  transition: opacity var(--collapse-button-time) ease-in-out, text-indent var(--collapse-button-time) ease-in-out;
+  padding-left: 0%;
+  transition: opacity var(--collapse-button-time) ease-in-out, padding-left var(--collapse-button-time) ease-in-out, text-indent var(--collapse-button-time) ease-in-out;
 }
 
 .coll_content{
@@ -384,12 +387,13 @@ nav .right a span {
   text-align: left;
   color: var(--link-color);
   opacity: 0;
-  text-indent: 10em;
+  text-indent: var(--collapse-button-text-indent-anim);
+  padding-left: var(--collapse-button-pad-anim);
   /* height: 0px; */
   /* margin: 0px; */
   margin-bottom: var(--collapse-margin-bottom);
   margin-top: var(--collapse-margin-top);
-  transition: opacity var(--collapse-button-time) ease-in-out, text-indent var(--collapse-button-time) ease-in-out;
+  transition: opacity var(--collapse-button-time) ease-in-out, padding-left var(--collapse-button-time) ease-in-out, text-indent var(--collapse-button-time) ease-in-out;
 }
 
 .red_mor_gone, .hid_but_gone, .hid_but2_gone {
@@ -400,7 +404,8 @@ nav .right a span {
   text-align: left;
   color: var(--link-color);
   opacity: 0;
-  text-indent: 10em;
+  text-indent: var(--collapse-button-text-indent-anim);
+  padding-left: var(--collapse-button-pad-anim);
   /* height: 0px; */
   /* margin: 0px; */
   margin-bottom: var(--collapse-margin-bottom);

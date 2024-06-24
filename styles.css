@@ -191,6 +191,10 @@ nav .right a span {
   gap: 50px;
 }
 
+.group {
+  margin-bottom: 20px;
+}
+
 .projects-section .group .person-details {
   text-align: center;
   flex: 2;
@@ -230,8 +234,46 @@ nav .right a span {
   margin-bottom: 27px;
 }
 
+#chaszcze-log-title {
+  margin-top: -27px;
+}
+
+#logo-bm {
+  display: block;
+  align-content: center;
+  text-align: center;
+  width: 200px;
+  /* aspect-ratio: 1 / 1; */
+  /* object-fit: scale-down; */
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: red;
+}
+
+#logo-bm img {
+  /* all: unset; */
+  display: block;
+  width: 160px;
+  aspect-ratio: 1 / 1;
+  object-fit: scale-down;
+  border-radius: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 27px;
+}
+
 .yt_iframe {
   aspect-ratio: 16/9;
+}
+
+.yt_title {
+  width: 100%;
+  /* margin-left: auto;
+  margin-right: auto; */
+  text-align: center;
+  font-style: italic;
 }
 
 .img-grid {

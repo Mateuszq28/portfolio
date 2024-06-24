@@ -200,37 +200,42 @@ nav .right a span {
   flex: 2;
 }
 
-.projects-section .group .person-details img {
+.projects-section .group .person-details > img {
   width: 200px;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 10px;
 }
 
-#logo-chaszcze {
+.logo-alternative1 {
   display: block;
   align-content: center;
   text-align: center;
   width: 200px;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1/1;
   /* object-fit: scale-down; */
   border-radius: 50%;
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
-  background-color: transparent;
+  background-color: red;
+  overflow: hidden;
 }
 
-#logo-chaszcze img {
+.logo-alternative1 > img {
   /* all: unset; */
   display: block;
-  width: 160px;
-  aspect-ratio: 1 / 1;
+  width: 200px;
+  /* aspect-ratio: 1/1; */
   object-fit: scale-down;
   border-radius: 0%;
   margin-left: auto;
   margin-right: auto;
+}
+
+#logo-chaszcze img {
+  width: 160px;
   margin-bottom: 27px;
 }
 
@@ -238,30 +243,10 @@ nav .right a span {
   margin-top: -27px;
 }
 
-#logo-bm {
-  display: block;
-  align-content: center;
-  text-align: center;
-  width: 200px;
-  /* aspect-ratio: 1 / 1; */
-  /* object-fit: scale-down; */
-  border-radius: 50%;
-  margin-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: red;
-}
-
 #logo-bm img {
-  /* all: unset; */
-  display: block;
-  width: 160px;
-  aspect-ratio: 1 / 1;
-  object-fit: scale-down;
-  border-radius: 0%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 27px;
+  margin-bottom: 0px;
+  /* width: 180px; */
+  padding-left: 0px;
 }
 
 .yt_iframe {

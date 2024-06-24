@@ -230,6 +230,10 @@ nav .right a span {
   margin-bottom: 27px;
 }
 
+.yt_iframe {
+  aspect-ratio: 16/9;
+}
+
 .img-grid {
   display: grid;
   gap: 5px;

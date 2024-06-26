@@ -684,14 +684,11 @@
 
   <div class="text">
   <!-- right column -->
-  <p>My friend was wondering how to speed up the process of checking the cards of orienteering participants (INO) and at the same time meet covid-19 restrictions. We together agreed that the best solution would be a smartphone application that uses a camera to scan QR codes. It was <nobr>a great</nobr> substitute for colored pencils that would be touched by all participants to write down codes from lanterns hidden in the forest. Since my friend has no knowledge of programming, I wrote the application and he organized the sporting event.</p>
+  <p>It was a fascinating project! Writing a program for a fixed-point DSP-type processor is quite a challenge. Float data types were not allowed; Operations in Q15 numbers. We had to be careful with overflows and minimize division operations by bit shifting. Working only on whole arrays; It was a quite new innovation for me. Before that project I was used to processing arrays only in a serial mode - by using loops. For sound processing such fashion would result in an increasing output delay, making real time impossible. The sampling rate of audio signals for DVD standard is 48 kHz. Therefore, the number of effective CPU clock ticks to be used is 48,000 times smaller. For a 1 Mhz clock it would be 1M/48k = 1/0.048 = 20.8(3). This leaves a maximum of 20 operations to process each sample. It is worth keeping in mind that division and multiplication are broken down by the compiler into simpler additions and subtractions, hence division and multiplication take much more operations (processor ticks) from our poor 20 ops pool. It was a good introduction for me to later work with python numpy arrays and feeding models in batches while studying artificial intelligence specialization. Ironically, I was surprised to be welcomed back into a sort of serial mode in data loaders, when the training data became too large to be cached.</p>
             
   <div class="links">
-      <a href="https://github.com/Mateuszq28/Chaszcze" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/Mateuszq28/dsp" target="_blank" rel="noopener noreferrer">
           <span>github</span>
-      </a>
-      <a href="https://play.google.com/store/apps/details?id=com.companyname.chaszcze&hl=en&gl=US" target="_blank" rel="noopener noreferrer">
-          <span>Google Play</span>
       </a>
   </div>
 
@@ -705,6 +702,47 @@
       <i class="fa-solid fa-angles-up"></i>
     </button>
     <div class="coll_content">
+      <h2>Let's break down some of the key aspects:</h2>
+      <h3>Fixed-Point Arithmetic (Q15):</h3>
+      <ul>
+          <li>In fixed-point arithmetic, numbers are represented with a fixed number of bits for the integer and fractional parts.</li>
+          <li>Q15 format uses 16 bits, with 15 bits for the fractional part and 1 bit for the sign.</li>
+          <li>This format allows efficient integer operations without the overhead of floating-point arithmetic.</li>
+          <li>Overflows can occur if you're not careful with the range of values.</li>
+      </ul>
+      <h3>Handling Overflows:</h3>
+      <ul>
+          <li>To prevent overflows, you likely used saturation arithmetic or compressor-expander techniques.</li>
+          <li>Saturation ensures that values stay within a specified range (e.g., -32768 to 32767 for Q15).</li>
+          <li>Compressor is a non-linear element, that compress dynamic of the signal. It multiply high amplitudes by the fraction value from corresponding multiplayer-amplitude compressor characteristic. It ensures signal never reach higher then limit value.</li>
+          <li>Compressor also can do the same thing with low values, but by gaining them. It ensures signal never drop under the low limit value.</li>
+          <li>Expander does the opposite operations.</li>
+      </ul>
+      <h3>Minimizing Division Operations:</h3>
+      <ul>
+          <li>Division is expensive in terms of computation time.</li>
+          <li>Bit shifting (right shift) can be used to approximate division by powers of 2.</li>
+          <li>For example, dividing by 2^n is equivalent to right-shifting n bits.</li>
+      </ul>
+      <h3>Signal Processing:</h3>
+      <ul>
+          <li>Working with sample arrays allowed you to process signals efficiently.</li>
+          <li>I've made different types od signals (sine waves, square waves, 
+          sawtooth wave)</li>
+          <li>I've designed and implemented low-pass filter.</li>
+          <li>We were also to work on real signals from microphone.</li>
+          <li>The low-pass frequency filter is essential for removing high-frequency noise.</li>
+      </ul>
+      <h3>Frequency field analysis</h3>
+      <ul>
+          <li>Using FFT (Fast Fourier Transform).</li>
+          <li>Balancing between time and freuancy resolutions.</li>
+          <li>Bigger analysis window - results higher frequency resolution (better) BUT lower time resolution (worse).</li>
+          <li>Smaller analysis window - results lower frequency resolution (worse) BUT higher time resolution (better).</li>
+          <li>Nyquist-Shannon sampling theorem relates the two parameters. To accurately reconstruct a signal, the sampling rate should be at least twice the bandwidth of the signal.</li>
+          <li>The maximum sound pass-bandwidth while 48 KHz sampling rate is 24 kHz.</li>
+      </ul>
+      Overall, this project demonstrates a deep understanding of DSP principles and optimization techniques. 😁🎶
         <!-- <p>text</p> -->
         <div class="img-grid">
           <img class="modal-solid-img" src="images/proj/qr/sc1.webp" alt="Starting Screen">

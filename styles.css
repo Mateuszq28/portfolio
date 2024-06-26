@@ -185,6 +185,18 @@ nav .right a span {
   text-align: center;
 }
 
+.projects-section h3 {
+  /* font-size: 35px; */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.projects-section h4 {
+  /* font-size: 35px; */
+  margin-bottom: 10px;
+  /* text-align: center; */
+}
+
 .projects-section .group {
   display: flex;
   align-items: center;
@@ -402,6 +414,10 @@ nav .right a span {
 
 ul > li {
   display: list-item;
+}
+
+ul {
+  margin-bottom: 10px;
 }
 
 .red_mor i, .hid_but i, .hid_but2 i {

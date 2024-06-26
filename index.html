@@ -702,15 +702,15 @@
       <i class="fa-solid fa-angles-up"></i>
     </button>
     <div class="coll_content">
-      <h2>Let's break down some of the key aspects:</h2>
-      <h3>Fixed-Point Arithmetic (Q15):</h3>
+      <h3>Let's break down some of the key aspects:</h3>
+      <h4>Fixed-Point Arithmetic (Q15):</h4>
       <ul>
           <li>In fixed-point arithmetic, numbers are represented with a fixed number of bits for the integer and fractional parts.</li>
           <li>Q15 format uses 16 bits, with 15 bits for the fractional part and 1 bit for the sign.</li>
           <li>This format allows efficient integer operations without the overhead of floating-point arithmetic.</li>
           <li>Overflows can occur if you're not careful with the range of values.</li>
       </ul>
-      <h3>Handling Overflows:</h3>
+      <h4>Handling Overflows:</h4>
       <ul>
           <li>To prevent overflows, you likely used saturation arithmetic or compressor-expander techniques.</li>
           <li>Saturation ensures that values stay within a specified range (e.g., -32768 to 32767 for Q15).</li>
@@ -718,13 +718,13 @@
           <li>Compressor also can do the same thing with low values, but by gaining them. It ensures signal never drop under the low limit value.</li>
           <li>Expander does the opposite operations.</li>
       </ul>
-      <h3>Minimizing Division Operations:</h3>
+      <h4>Minimizing Division Operations:</h4>
       <ul>
           <li>Division is expensive in terms of computation time.</li>
           <li>Bit shifting (right shift) can be used to approximate division by powers of 2.</li>
           <li>For example, dividing by 2^n is equivalent to right-shifting n bits.</li>
       </ul>
-      <h3>Signal Processing:</h3>
+      <h4>Signal Processing:</h4>
       <ul>
           <li>Working with sample arrays allowed you to process signals efficiently.</li>
           <li>I've made different types od signals (sine waves, square waves, 
@@ -733,7 +733,7 @@
           <li>We were also to work on real signals from microphone.</li>
           <li>The low-pass frequency filter is essential for removing high-frequency noise.</li>
       </ul>
-      <h3>Frequency field analysis</h3>
+      <h4>Frequency field analysis</h4>
       <ul>
           <li>Using FFT (Fast Fourier Transform).</li>
           <li>Balancing between time and freuancy resolutions.</li>

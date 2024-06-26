@@ -393,11 +393,15 @@ nav .right a span {
   transition: opacity var(--collapse-button-time) ease-in-out, padding-left var(--collapse-button-time) ease-in-out, text-indent var(--collapse-button-time) ease-in-out;
 }
 
-.coll_content{
+.coll_content {
   display: block;
   max-height: 0;
   overflow: hidden;
   transition: max-height var(--collapse-content-time) ease-in-out;
+}
+
+ul > li {
+  display: list-item;
 }
 
 .red_mor i, .hid_but i, .hid_but2 i {

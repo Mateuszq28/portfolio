@@ -23,9 +23,11 @@ function change_class(elem, from_c, to_c) {
 
 function content_roller(cont) {
   if (cont.style.maxHeight) {
+    cont.style.overflow = "hidden";
     cont.style.maxHeight = null;
   } else {
     cont.style.maxHeight = cont.scrollHeight + "px";
+    cont.style.overflow = "visible";
   }
 }
 

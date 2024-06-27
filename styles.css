@@ -422,7 +422,8 @@ ul {
 
 .red_mor i, .hid_but i, .hid_but2 i {
   /* padding-left: -2ch; */
-  margin: -1em;
+  /* margin: -1em; */
+  text-indent: 1em;
 }
 
 .red_mor:hover, .hid_but:hover, .hid_but2:hover {

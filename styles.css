@@ -420,6 +420,10 @@ ul {
   margin-bottom: 10px;
 }
 
+.marg_bot {
+  margin-bottom: 10px;
+}
+
 .red_mor i, .hid_but i, .hid_but2 i {
   /* padding-left: -2ch; */
   /* margin: -1em; */

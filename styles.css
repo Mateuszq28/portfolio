@@ -261,6 +261,11 @@ nav .right a span {
   padding-left: 0px;
 }
 
+#logo-dsp img {
+  /* width: 200px; */
+  object-fit: cover;
+}
+
 .yt_iframe {
   aspect-ratio: 16/9;
 }

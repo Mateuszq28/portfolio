@@ -588,7 +588,7 @@
     <div class="person-details">
     <!-- left column -->
     <div class="logo-alternative1" id="logo-mapscrap">
-      <img src="images/proj/qr/logo-chaszcze1.png">
+      <img src="images/proj/qr/logo-harp.jpg">
     </div>
     <p>Map Scrap Detector</p>
     <p>Script made in "Harpagan Online" event</p>
@@ -599,11 +599,8 @@
     <p>Matlab script, written fast during the Harpagan Online. It searches small, modificated scrap of map (dfferent resolution, noise, some new shapes on it) on the bigger one.</p>
               
     <div class="links">
-        <a href="https://github.com/Mateuszq28/Chaszcze" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/Mateuszq28/Wykrywacz-fragmentu-mapy" target="_blank" rel="noopener noreferrer">
             <span>github</span>
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.companyname.chaszcze&hl=en&gl=US" target="_blank" rel="noopener noreferrer">
-            <span>Google Play</span>
         </a>
     </div>
 
@@ -761,16 +758,16 @@
             <i class="fa-solid fa-angles-up"></i>
           </button>
           <div class="coll_content">
-              <p>
               <h3>Generating Signals on DSP</h3>
-              <h4>Sawtooth Signal Generation</h4>
-              <h5>Amplitude Step Value Calculations</h5>
+              <h4>Sawtooth signal generation</h4>
+              <p>
+              <h5>Amplitude step value calculations</h5>
               step = (2*32768)/(48000/f) ≈ (f*22368)/16384 = (f*22368)>>14<br>
               step = STEP_SAW = round((2*32768)/(48000/f)) = round(136,5333) = 137
               </p>
-              <h5>Saw Function Code</h5>
-              <!-- <div class="yt_title">Saw Function Code</div> -->
 
+              <h5>Saw function code</h5>
+              <!-- <div class="yt_title">Saw Function Code</div> -->
               <div class="box">
                 <pre>
                   <code class="language-c line-numbers" data-copy-state="copy">
@@ -787,6 +784,212 @@
                   </code>
                 </pre>
               </div>
+
+              <h5>Time graph of the saw function</h5>
+              <img class="modal-solid-img" src="images/proj/dsp/saw-time.png" alt="Time graph of the saw function">
+              <!-- The Modal -->
+              <div class="img-modal">
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content">
+                <!-- Modal Caption (Image Text) -->
+                <div class="caption"></div>
+              </div>
+
+              <h5>A segment of the time graph of the saw function, enlarged</h5>
+              <img class="modal-solid-img" src="images/proj/dsp/saw-time-zoom.png" alt="A segment of the time graph of the saw function, enlarged">
+              <!-- The Modal -->
+              <div class="img-modal">
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content">
+                <!-- Modal Caption (Image Text) -->
+                <div class="caption"></div>
+              </div>
+              
+              <p>
+                The values ​​on the chart change over the full range from -32768 to 32767 in Q15. At a signal frequency of 100 Hz, one period should last 1/100 of a second and be represented by approximately 480 samples, which agrees with the graph. The entire graph consists of 5000 samples, so we should see 10.41 fundamental period of the saw, which is also consistent with the attached photo. The error associated with rounding 136.5(3) to 137 results in a phase acceleration of approximately 17 samples for every 5000 samples.
+              </p>
+
+              <h5>Spectrum plot of the saw function on a logarithmic scale</h5>
+              <img class="modal-solid-img" src="images/proj/dsp/saw-spectrum-log.png" alt="Spectrum plot of the saw function on a logarithmic scale">
+              <!-- The Modal -->
+              <div class="img-modal">
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content">
+                <!-- Modal Caption (Image Text) -->
+                <div class="caption"></div>
+              </div>
+
+              <h5>An enlarged segment of the spectrum of the saw function on a logarithmic scale</h5>
+              <img class="modal-solid-img" src="images/proj/dsp/saw-spectrum-log-zoom.png" alt="An enlarged segment of the spectrum of the saw function on a logarithmic scale">
+              <!-- The Modal -->
+              <div class="img-modal">
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content">
+                <!-- Modal Caption (Image Text) -->
+                <div class="caption"></div>
+              </div>
+
+              <p>
+                The spectral graph has the shape of a comb.
+              </p>
+              
+              <p>
+                <h5>The actual frequency of the generated signal</h5>
+                (2*32768*f)/(48000) = 137<br>
+                f = (137*48000)/(2*32768) = 100,3417969 Hz
+              </p>
+
+              <p>
+                The actual frequency of the generated signal is 100.3417969 Hz. The difference results from the precision of numerical notation in the computer. Greater precision can be achieved by sacrificing more memory to recording the number. We cannot obtain a frequency of exactly 100 Hz, because the number 136.5(3) does not have a finite decimal notation.<br>
+                An inverted saw could be generated by subtracting the step instead of adding it to the accumulator in the saw function.
+              </p>
+
+              <h4>Generating a square wave signal</h4>
+
+              <h5>Rect function code</h5>
+              <div class="box">
+                <pre>
+                  <code class="language-c line-numbers" data-copy-state="copy">
+                    void rect(int* buffer, unsigned int buflen, int step, int threshold)
+                    {
+                      saw(buffer, buflen, step);
+                      int i;
+                      for(i = 0; i < buflen; i++)
+                      {
+                        if (buffer[i] < threshold)
+                          buffer[i] = -32768;
+                        else
+                          buffer[i] = 32767;
+                      }
+                    }
+                  </code>
+                </pre>
+              </div>
+
+              <h5>Time graph of the rect function for threshold 0</h5>
+              <img class="modal-solid-img" src="images/proj/dsp/rect-time.png" alt="Time graph of the rect function for threshold 0">
+              <!-- The Modal -->
+              <div class="img-modal">
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content">
+                <!-- Modal Caption (Image Text) -->
+                <div class="caption"></div>
+              </div>
+
+              <h5>Spectrum of the rect function on a logarithmic scale for threshold 0</h5>
+              <img class="modal-solid-img" src="images/proj/dsp/rect-spectrum-log.png" alt="Spectrum of the rect function on a logarithmic scale for threshold 0">
+              <!-- The Modal -->
+              <div class="img-modal">
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content">
+                <!-- Modal Caption (Image Text) -->
+                <div class="caption"></div>
+              </div>
+
+              <h5>Enlarged spectrum of the rect function on a logarithmic scale for threshold 0</h5>
+              <img class="modal-solid-img" src="images/proj/dsp/rect-spectrum-log-zoom.png" alt="Enlarged spectrum of the rect function on a logarithmic scale for threshold 0">
+              <!-- The Modal -->
+              <div class="img-modal">
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content">
+                <!-- Modal Caption (Image Text) -->
+                <div class="caption"></div>
+              </div>
+
+              <h5>Timing plot of rect function for threshold 10923 (1/3 fill)</h5>
+              <img class="modal-solid-img" src="images/proj/dsp/rect-time-thres-10923.png" alt="Timing plot of rect function for threshold 10923 (1/3 fill)">
+              <!-- The Modal -->
+              <div class="img-modal">
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content">
+                <!-- Modal Caption (Image Text) -->
+                <div class="caption"></div>
+              </div>
+
+              <h5>Spectrum of the rect function on a logarithmic scale for threshold 10923 (1/3 fill)</h5>
+              <img class="modal-solid-img" src="images/proj/dsp/rect-spectrum-thres-10923.png" alt="Spectrum of the rect function on a logarithmic scale for threshold 10923 (1/3 fill)">
+              <!-- The Modal -->
+              <div class="img-modal">
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content">
+                <!-- Modal Caption (Image Text) -->
+                <div class="caption"></div>
+              </div>
+
+              <h5>Enlarged spectrum of the rect function on a logarithmic scale for threshold 10923 (1/3 fill)</h5>
+              <img class="modal-solid-img" src="images/proj/dsp/rect-spectrum-zoom-thres-10923.png" alt="Enlarged spectrum of the rect function on a logarithmic scale for threshold 10923 (1/3 fill)">
+              <!-- The Modal -->
+              <div class="img-modal">
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content">
+                <!-- Modal Caption (Image Text) -->
+                <div class="caption"></div>
+              </div>
+
+              <p>
+                The values ​​on the chart change over the full range from -32768 to 32767 in Q15. As in the previous task, there are 480 samples per period (same frequency) - that's correct. The time plot show that the threshold values ​​have been properly selected for the expected fill levels. The spectral plots look very similar and have the shape of a comb, but with fewer teeth than in the case of a sawtooth signal. The spectrum of a 1/3 fill signal is characterized by "double teeth".
+              </p>
+
+              <h4>Generating a triangle signal</h4>
+
+              <h5>Tri function code</h5>
+              <div class="box">
+                <pre>
+                  <code class="language-c line-numbers" data-copy-state="copy">
+                    void tri(int* buffer, unsigned int buflen, int step)
+                    {
+                      saw(buffer, buflen, step);
+                      int i;
+                      int temp;
+                      for(i = 0; i < buflen; i++)
+                      {
+                        temp = buffer[i];
+                        temp = temp < 0 ? -temp : temp;
+                        buffer[i] = (temp - 16384)<<1;
+                      }
+                    }
+                  </code>
+                </pre>
+              </div>
+
+              <h5>Tri function time plot</h5>
+              <img class="modal-solid-img" src="images/proj/dsp/tri-time.png" alt="Tri function time plot">
+              <!-- The Modal -->
+              <div class="img-modal">
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content">
+                <!-- Modal Caption (Image Text) -->
+                <div class="caption"></div>
+              </div>
+
+              <p>
+                (...)
+              </p>
+
+              <img src="images/under-construction.jpg" alt="under-construction">
+
               <button type="button" class="hid_but2">
                 hide [even more]
                 <i class="fa-solid fa-angles-up"></i>

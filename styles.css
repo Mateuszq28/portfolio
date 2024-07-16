@@ -224,6 +224,11 @@ nav .right a span {
   margin-bottom: 10px;
 }
 
+.modal-solid-img {
+  /* display: block; */
+  cursor: pointer;
+}
+
 .logo-alternative1 {
   display: block;
   align-content: center;

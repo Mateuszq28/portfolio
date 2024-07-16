@@ -31,6 +31,18 @@ function content_roller(cont) {
   }
 }
 
+function parent_roller(but) {
+  read_more = but.parentNode;
+  if (read_more != null) {
+    coll_content = read_more.parentNode;
+    if (coll_content != null) {
+      if (coll_content.classList[0] == "coll_content") {
+        coll_content.style.maxHeight = coll_content.scrollHeight + "px";
+      }
+    }
+  }
+}
+
 
 // with animation
 var coll_ = document.getElementsByClassName("red_mor");
@@ -56,6 +68,7 @@ for (i = 0; i < coll_.length; i++) {
     }, wait_time*2);
     
     content_roller(content);
+    parent_roller(hid_but);
   });
 }
 
@@ -82,6 +95,7 @@ for (i = 0; i < hid_but_.length; i++) {
     }, wait_time*2);
 
     content_roller(content);
+    parent_roller(hid_but);
   });
 }
 
@@ -108,5 +122,6 @@ for (i = 0; i < hid_but2_.length; i++) {
     }, wait_time*2);
 
     content_roller(content);
+    parent_roller(hid_but);
   });
 }

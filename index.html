@@ -11,6 +11,8 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <link href="themes/prism.css" rel="stylesheet" />
+
   <!-- <script src="jquery-3.7.1.min.js"></script> -->
 
   <link rel="stylesheet" href="styles.css">
@@ -762,9 +764,26 @@
               <h3>Generating Signals on DSP</h3>
               <h4>Sawtooth Signal Generation</h4>
               <h5>Amplitude Step Value Calculations</h5>
-              step = (2*32768)/(48000/f) ≈ (f*22368)/16384 = (f*22368)>>14
+              step = (2*32768)/(48000/f) ≈ (f*22368)/16384 = (f*22368)>>14<br>
               step = STEP_SAW = round((2*32768)/(48000/f)) = round(136,5333) = 137
               <h5>Saw Function Code</h5>
+
+              <div class="box">
+                <pre>
+                  <code class="language-c line-numbers" data-copy-state="copy">
+                    void saw(int* buffer, unsigned int buflen, int step)
+                    {
+                      static int accumulator = 0;
+                      int i;
+                      for(i = 0; i < buflen; i++)
+                      {
+                        buffer[i] = accumulator;
+                        accumulator += step;
+                      }
+                    }
+                  </code>
+                </pre>
+              </div>
   
               <button type="button" class="hid_but2">
                 hide [even more]
@@ -909,5 +928,6 @@
   </main>
   <script src="collapse.js"></script>
   <script src="img_modal.js"></script>
+  <script src="prism.js"></script>
 </body>
 </html>

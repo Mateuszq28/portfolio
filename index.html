@@ -588,7 +588,7 @@
     <div class="person-details">
     <!-- left column -->
     <div class="logo-alternative1" id="logo-mapscrap">
-      <img src="images/proj/qr/logo-harp.jpg">
+      <img src="images/proj/harp/logo-harp.jpg">
     </div>
     <p>Map Scrap Detector</p>
     <p>Script made in "Harpagan Online" event</p>
@@ -601,6 +601,9 @@
     <div class="links">
         <a href="https://github.com/Mateuszq28/Wykrywacz-fragmentu-mapy" target="_blank" rel="noopener noreferrer">
             <span>github</span>
+        </a>
+        <a href="images/proj/harp/Harpagan_Online_Zadania.pdf" target="_blank" rel="noopener noreferrer">
+            <span>startup message</span>
         </a>
     </div>
 
@@ -617,52 +620,30 @@
         <p>
           The Harpagan Online event took place on April 17, 2020. Each participant had to search for prepared small photos of map sections on a large map of the Geoportal portal. After finding a matching location, it was necessary to view it in Google Street View and note the answers to the question related to it. Finding the clippings was quite demanding, so I came up with the idea of ​​writing a script in Matlab that would do this task for me. The cuts were made on an unknown scale. In addition, they contained distortions in the form of circles and numbers with the numbers of the point to be found. I decided to take screenshots of a map showing the area on a large scale. Then I applied the cutout to the large image and moved it in a loop over the entire large image. I also solved the differences in scale with a loop - guessing and then searching for the best matching scale progressing in a loop. To account for minor differences between the slice and the map, I could not assume that the overlapping fragments would be identical, especially since additional shapes were applied to the slices. So I used correlation. The place where the statistic was highest indicated the location being searched for. Of course, I didn't win the event because I spent half of the night correcting the script, but I still had fun.
         </p>
-          <!-- <p>text</p> -->
-          <div class="img-grid">
-            <img class="modal-solid-img" src="images/proj/qr/sc1.webp" alt="Starting Screen">
-            <!-- The Modal -->
-            <div class="img-modal">
-              <!-- The Close Button -->
-              <span class="close">&times;</span>
-              <!-- Modal Content (The Image) -->
-              <img class="modal-content">
-              <!-- Modal Caption (Image Text) -->
-              <div class="caption"></div>
-            </div>
-                                
-            <img class="modal-solid-img" src="images/proj/qr/sc2.webp" alt="QR codes to collect">
-            <!-- The Modal -->
-            <div class="img-modal">
-              <!-- The Close Button -->
-              <span class="close">&times;</span>
-              <!-- Modal Content (The Image) -->
-              <img class="modal-content">
-              <!-- Modal Caption (Image Text) -->
-              <div class="caption"></div>
-            </div>
-                                
-            <img class="modal-solid-img" src="images/proj/qr/sc3.webp" alt="QR scanner">
-            <!-- The Modal -->
-            <div class="img-modal">
-              <!-- The Close Button -->
-              <span class="close">&times;</span>
-              <!-- Modal Content (The Image) -->
-              <img class="modal-content">
-              <!-- Modal Caption (Image Text) -->
-              <div class="caption"></div>
-            </div>
-                                
-            <img class="modal-solid-img" src="images/proj/qr/sc4.webp" alt="Collected QR codes">
-            <!-- The Modal -->
-            <div class="img-modal">
-              <!-- The Close Button -->
-              <span class="close">&times;</span>
-              <!-- Modal Content (The Image) -->
-              <img class="modal-content">
-              <!-- Modal Caption (Image Text) -->
-              <div class="caption"></div>
-            </div>
+
+        <div class="img-grid">
+          <img class="modal-solid-img" src="images/proj/harp/desktop.png" alt="How I spent whole night">
+          <!-- The Modal -->
+          <div class="img-modal">
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content">
+            <!-- Modal Caption (Image Text) -->
+            <div class="caption"></div>
           </div>
+                              
+          <img class="modal-solid-img" src="images/proj/harp/starting_num.png" alt="Starting number">
+          <!-- The Modal -->
+          <div class="img-modal">
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content">
+            <!-- Modal Caption (Image Text) -->
+            <div class="caption"></div>
+          </div>
+        </div>
 
           <button type="button" class="hid_but2">
             hide

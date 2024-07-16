@@ -759,8 +759,12 @@
             <i class="fa-solid fa-angles-up"></i>
           </button>
           <div class="coll_content">
-              <!-- <p>text</p> -->
-              
+              <h3>Generating Signals on DSP</h3>
+              <h4>Sawtooth Signal Generation</h4>
+              <h5>Amplitude Step Value Calculations</h5>
+              step = (2*32768)/(48000/f) ≈ (f*22368)/16384 = (f*22368)>>14
+              step = STEP_SAW = round((2*32768)/(48000/f)) = round(136,5333) = 137
+              <h5>Saw Function Code</h5>
   
               <button type="button" class="hid_but2">
                 hide [even more]

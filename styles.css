@@ -280,6 +280,10 @@ nav .right a span {
   margin-left: -57%;
 }
 
+#logo-monkey img {
+  object-fit: cover;
+}
+
 .yt_iframe {
   aspect-ratio: 16/9;
 }

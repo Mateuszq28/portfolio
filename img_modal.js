@@ -3,16 +3,16 @@ var i;
 
 for (i = 0; i < img_solid_group.length; i++) {
 
-    var img_solid = img_solid_group[i];
+    let img_solid = img_solid_group[i];
 
     // Get the modal
-    var modal = img_solid.nextElementSibling;
+    let modal = img_solid.nextElementSibling;
 
     // Get the <span> element that closes the modal
-    var span_close = modal.firstElementChild;
+    let span_close = modal.firstElementChild;
     // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var img_modal = span_close.nextElementSibling;
-    var captionText = img_modal.nextElementSibling;
+    let img_modal = span_close.nextElementSibling;
+    let captionText = img_modal.nextElementSibling;
 
     img_solid.onclick = function(){
     modal.style.display = "block";

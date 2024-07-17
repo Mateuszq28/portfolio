@@ -332,6 +332,13 @@ nav .right a span {
   /* 1540px for big pictures */
 }
 
+.modal-content-large {
+  margin: auto;
+  display: block;
+  width: 90%;
+  max-width: 1540px;
+}
+
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
 .caption {
   margin: auto;

@@ -284,6 +284,11 @@ nav .right a span {
   object-fit: cover;
 }
 
+#logo-bike img {
+  object-fit: cover;
+  height: 100%;
+}
+
 .yt_iframe {
   aspect-ratio: 16/9;
 }

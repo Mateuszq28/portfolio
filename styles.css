@@ -275,6 +275,11 @@ nav .right a span {
   object-fit: cover;
 }
 
+#logo-scout img {
+  width: 185%;
+  margin-left: -57%;
+}
+
 .yt_iframe {
   aspect-ratio: 16/9;
 }

@@ -231,12 +231,7 @@ nav .right a span {
   margin-bottom: 10px;
 }
 
-.modal-solid-img {
-  /* display: block; */
-  cursor: pointer;
-  /* white-space: nowrap; */
-  /* max-width: 200px; */
-}
+
 
 .logo-alternative1 {
   display: block;
@@ -306,11 +301,18 @@ nav .right a span {
   /* object-fit: scale-down; */
 }
 
-.coll_content modal-solid-img {
+/* .coll_content modal-solid-img { */
   /* width: 625px; */
   /* white-space: nowrap; */
-  max-width: 100%;
+  /* max-width: 100%; */
   /* object-fit: scale-down; */
+/* } */
+
+.modal-solid-img {
+  /* display: block; */
+  cursor: pointer;
+  /* white-space: nowrap; */
+  max-width: 100%;
 }
 
 .tag_all {

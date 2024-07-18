@@ -306,6 +306,10 @@ nav .right a span {
   color: var(--text-color);
 }
 
+.tags {
+  margin-bottom: 5px;
+}
+
 .tags > a {
   /* text-decoration: none; */
   color: var(--link-color);

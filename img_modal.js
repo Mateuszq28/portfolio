@@ -1,4 +1,4 @@
-var img_solid_group = document.getElementsByClassName("modal-solid-img");
+let img_solid_group = document.getElementsByClassName("modal-solid-img");
 var i;
 
 for (i = 0; i < img_solid_group.length; i++) {

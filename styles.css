@@ -1,6 +1,7 @@
 :root {
   --text-color: #1a1c20;
   --link-color: #df692d;
+  --link-color-lite: #e7cbbd;
   /* --link-color: #4a76ee; */
   --background-color: #eeeff1;
   --more-hover: #ecc06f;
@@ -166,6 +167,12 @@ nav .right a span {
   border-radius: 5px;
 }
 
+.cells .tag_all .cell:hover {
+  color: var(--link-color);
+  border-color: var(--link-color);
+  background-color: var(--link-color-lite);
+}
+
 .skills-section .cells .cell img {
   width: 30px;
   height: 30px;
@@ -293,6 +300,21 @@ nav .right a span {
 /* .box {
   width: 625px;
 } */
+
+.tag_all {
+  /* text-decoration: none; */
+  color: var(--text-color);
+}
+
+.tags > a {
+  /* text-decoration: none; */
+  color: var(--link-color);
+}
+
+.tags > a :hover {
+  /* text-decoration: none; */
+  color: var(--text-color);
+}
 
 .yt_iframe {
   aspect-ratio: 16/9;

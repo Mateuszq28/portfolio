@@ -607,7 +607,7 @@ ul {
 @media screen and (max-width: 1100px) {
 
   .box {
-    max-width: 500px;
+    max-width: 540px;
   }
 }
 
@@ -618,17 +618,17 @@ ul {
   }
 
   .box {
-    max-width: 400px;
+    max-width: 540px;
   }
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 770px) {
   /* SECTION 1: Hero */
   .hero-section {
     flex-direction: column-reverse;
   
     .box {
-      max-width: 300px;
+      max-width: 540px;
     }
   }
 
@@ -658,14 +658,14 @@ ul {
   }
 
   .box {
-    max-width: 270px;
+    max-width: 480px;
   }
 }
 
 @media screen and (max-width: 600px) {
 
   .box {
-    max-width: 230px;
+    max-width: 270px;
   }
 
   /* NAVBAR */

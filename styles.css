@@ -234,6 +234,8 @@ nav .right a span {
 .modal-solid-img {
   /* display: block; */
   cursor: pointer;
+  /* white-space: nowrap; */
+  /* max-width: 200px; */
 }
 
 .logo-alternative1 {
@@ -300,13 +302,15 @@ nav .right a span {
 .box {
   /* width: 625px; */
   /* white-space: nowrap; */
-  max-width: 100px;
+  max-width: 100%;
+  /* object-fit: scale-down; */
 }
 
 .coll_content modal-solid-img {
   /* width: 625px; */
   /* white-space: nowrap; */
-  max-width: 100px;
+  max-width: 100%;
+  /* object-fit: scale-down; */
 }
 
 .tag_all {
@@ -485,6 +489,7 @@ nav .right a span {
   max-height: 0;
   overflow: hidden;
   transition: max-height var(--collapse-content-time) ease-in-out;
+  object-fit: scale-down;
 }
 
 ul > li {

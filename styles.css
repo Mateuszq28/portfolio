@@ -479,6 +479,7 @@ nav .right a span {
   max-height: 0;
   overflow: hidden;
   transition: max-height var(--collapse-content-time) ease-in-out;
+  width: 100%;
 }
 
 ul > li {

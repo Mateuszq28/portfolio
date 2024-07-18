@@ -234,6 +234,7 @@ nav .right a span {
 .modal-solid-img {
   /* display: block; */
   cursor: pointer;
+  max-width: 100%;
 }
 
 .logo-alternative1 {
@@ -297,9 +298,10 @@ nav .right a span {
   height: 100%;
 }
 
-/* .box {
-  width: 625px;
-} */
+.box {
+  /* width: 100%; */
+  max-width: 100%;
+}
 
 .tag_all {
   /* text-decoration: none; */

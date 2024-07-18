@@ -297,9 +297,10 @@ nav .right a span {
   height: 100%;
 }
 
-/* .box {
-  width: 625px;
-} */
+.box {
+  /* width: 625px; */
+  white-space: nowrap;
+}
 
 .tag_all {
   /* text-decoration: none; */

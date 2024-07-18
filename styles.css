@@ -231,7 +231,10 @@ nav .right a span {
   margin-bottom: 10px;
 }
 
-
+.modal-solid-img {
+  /* display: block; */
+  cursor: pointer;
+}
 
 .logo-alternative1 {
   display: block;
@@ -294,27 +297,9 @@ nav .right a span {
   height: 100%;
 }
 
-.box {
-  /* width: 625px; */
-  /* white-space: nowrap; */
-  max-width: 100%;
-  width: 50px;
-  /* object-fit: scale-down; */
-}
-
-/* .coll_content modal-solid-img { */
-  /* width: 625px; */
-  /* white-space: nowrap; */
-  /* max-width: 100%; */
-  /* object-fit: scale-down; */
-/* } */
-
-.modal-solid-img {
-  /* display: block; */
-  cursor: pointer;
-  /* white-space: nowrap; */
-  max-width: 100%;
-}
+/* .box {
+  width: 625px;
+} */
 
 .tag_all {
   /* text-decoration: none; */
@@ -492,7 +477,6 @@ nav .right a span {
   max-height: 0;
   overflow: hidden;
   transition: max-height var(--collapse-content-time) ease-in-out;
-  object-fit: scale-down;
 }
 
 ul > li {

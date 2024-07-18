@@ -604,14 +604,14 @@ ul {
   filter: brightness(.9);
 }
 
-@media (max-width: 1100px) {
+@media screen (max-width: 1100px) {
 
   .box {
     max-width: 500px;
   }
 }
 
-@media (max-width: 850px) {
+@media screen (max-width: 850px) {
   /* SECTION 1: Hero */
   .hero-section .text h2 {
     font-size: 35px;
@@ -622,7 +622,7 @@ ul {
   }
 }
 
-@media (max-width: 740px) {
+@media screen (max-width: 740px) {
   /* SECTION 1: Hero */
   .hero-section {
     flex-direction: column-reverse;
@@ -662,7 +662,7 @@ ul {
   }
 }
 
-@media (max-width: 600px) {
+@media screen (max-width: 600px) {
 
   .box {
     max-width: 230px;

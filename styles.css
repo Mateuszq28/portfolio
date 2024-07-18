@@ -302,6 +302,11 @@ nav .right a span {
   white-space: nowrap;
 }
 
+.coll_content modal-solid-img {
+  /* width: 625px; */
+  white-space: nowrap;
+}
+
 .tag_all {
   /* text-decoration: none; */
   color: var(--text-color);

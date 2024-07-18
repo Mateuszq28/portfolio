@@ -299,8 +299,9 @@ nav .right a span {
 }
 
 .box {
-  /* width: 100%; */
-  max-width: 100%;
+  /* max-width: 100%; */
+  width: 100%;
+  max-width: 540px;
 }
 
 .tag_all {
@@ -425,13 +426,6 @@ nav .right a span {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-  .modal-content {
-    width: 100%;
-  }
 }
 
 #ai-tech .group .person-details img {
@@ -615,12 +609,20 @@ ul {
   .hero-section .text h2 {
     font-size: 35px;
   }
+
+  .box {
+    max-width: 400px;
+  }
 }
 
 @media (max-width: 740px) {
   /* SECTION 1: Hero */
   .hero-section {
     flex-direction: column-reverse;
+  
+    .box {
+      max-width: 300px;
+    }
   }
 
   .hero-section .headshot img {
@@ -642,7 +644,23 @@ ul {
   }
 }
 
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+
+  .box {
+    max-width: 270px;
+  }
+}
+
 @media (max-width: 600px) {
+
+  .box {
+    max-width: 230px;
+  }
+
   /* NAVBAR */
   nav {
     padding: 0 20px;

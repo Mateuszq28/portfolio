@@ -301,7 +301,7 @@ nav .right a span {
 .box {
   /* max-width: 100%; */
   width: 100% !important;
-  max-width: 540px !important;
+  /* max-width: 540px !important; */
 }
 
 .tag_all {

@@ -301,7 +301,7 @@ nav .right a span {
 .box {
   /* max-width: 100%; */
   width: 100%;
-  max-width: 270px;
+  max-width: 250px;
 }
 
 .tag_all {
@@ -705,8 +705,67 @@ Muszą wtedy mieć narzuconą konkretną wartość max-width w pikselach
 ==================================
 */
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 300px) {
+  .box {
+    max-width: 260px;
+  }
+}
 
+@media only screen and (min-width: 340px) {
+  .box {
+    max-width: 300px;
+  }
+}
+
+@media only screen and (min-width: 360px) {
+  .box {
+    max-width: 320px;
+  }
+}
+
+@media only screen and (min-width: 370px) {
+  .box {
+    max-width: 330px;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  .box {
+    max-width: 340px;
+  }
+}
+
+@media only screen and (min-width: 390px) {
+  .box {
+    max-width: 350px;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .box {
+    max-width: 360px;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  .box {
+    max-width: 410px;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .box {
+    max-width: 460px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .box {
+    max-width: 500px;
+  }
+}
+
+@media only screen and (min-width: 640px) {
   .box {
     max-width: 540px;
   }

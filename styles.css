@@ -604,39 +604,17 @@ ul {
   filter: brightness(.9);
 }
 
-@media only screen and (min-width: 1100px) {
-
-  .box {
-    max-width: 540px;
-  }
-}
-
-@media only screen and (max-width: 1100px) {
-
-  .box {
-    max-width: 540px;
-  }
-}
-
 @media only screen and (max-width: 850px) {
   /* SECTION 1: Hero */
   .hero-section .text h2 {
     font-size: 35px;
   }
-
-  .box {
-    max-width: 540px;
-  }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 740px) {
   /* SECTION 1: Hero */
   .hero-section {
     flex-direction: column-reverse;
-  
-    .box {
-      max-width: 270px;
-    }
   }
 
   .hero-section .headshot img {
@@ -663,17 +641,9 @@ ul {
   .modal-content {
     width: 100%;
   }
-
-  .box {
-    max-width: 270px;
-  }
 }
 
 @media only screen and (max-width: 600px) {
-
-  .box {
-    max-width: 270px;
-  }
 
   /* NAVBAR */
   nav {
@@ -720,5 +690,24 @@ ul {
   /* SECTION 4: Contact */
   .contact-section {
     padding: 0 20px;
+  }
+}
+
+
+
+/* 
+==================================
+USTAWIENIA BOXÓW Z KODEM
+(snippety demonstrujące kod moich programów w artykułach)
+Nie chcą się one zmniejszać wraz z max-width = 100%, gdy ich treść jest dłuższa od boxa
+Muszą wtedy mieć narzuconą konkretną wartość max-width w pikselach
+(pikselach logicznych na telefonach)
+==================================
+*/
+
+@media only screen and (min-width: 1100px) {
+
+  .box {
+    max-width: 540px;
   }
 }

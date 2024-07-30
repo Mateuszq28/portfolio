@@ -159,13 +159,47 @@ nav .right a span {
         #00affa 30%,
         #0190cd 70%,
         #764ada 80%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-    background-size: 500% auto;
-    animation: textShine 5s ease-in-out infinite alternate;
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+
+.anim_grad_link {
+  /* background: linear-gradient(
+        to right,
+        #7953cd 20%,
+        #00affa 30%,
+        #0190cd 70%,
+        #764ada 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate; */
+
+  margin-top: 15px;
+}
+
+.anim_grad_link a {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid #0190cd;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: .1s;
+  color: #0190cd;
+}
+
+.anim_grad_link a:hover {
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
 }
 
 .skills-section .text {

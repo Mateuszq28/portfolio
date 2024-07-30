@@ -40,6 +40,16 @@ a {
   text-decoration: none;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: var(--link-color);
+}
+
+::selection {
+  color: white;
+  background: var(--link-color);
+}
+
 /* NAVBAR */
 nav {
   display: flex;

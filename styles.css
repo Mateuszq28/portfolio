@@ -327,6 +327,23 @@ nav .right a span {
   overflow: hidden;
 }
 
+.studies_table { 
+  border-spacing: 0; 
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.studies_table td, .studies_table th { 
+  border-bottom: 1px solid black; 
+  text-align: left; 
+}
+
+.studies_table th {
+  font-weight: bold;
+}
+
 .logo-alternative1 > img {
   /* all: unset; */
   display: block;

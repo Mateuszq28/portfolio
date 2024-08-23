@@ -393,6 +393,15 @@ nav .right a span {
   margin-bottom: 40px;
 }
 
+#logo-census img {
+  object-fit: cover;
+  height: 100%;
+}
+
+#logo-census {
+  margin-bottom: 38px;
+}
+
 .box {
   /* max-width: 100%; */
   width: 100%;

@@ -389,6 +389,10 @@ nav .right a span {
   height: 100%;
 }
 
+#logo-crud {
+  margin-bottom: 40px;
+}
+
 .box {
   /* max-width: 100%; */
   width: 100%;

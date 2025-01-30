@@ -259,6 +259,24 @@ nav .right a span {
   font-size: large;
 }
 
+#degree {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#degree div {
+  display: inline-block;
+  margin-top: 10px;
+  /* margin-bottom: auto; */
+  display: inline-block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* SECTION 3: Projects */
 .projects-section {
   padding: 0 50px;

@@ -393,6 +393,16 @@ nav .right a span {
   object-fit: cover;
 }
 
+#logo-monte-carlo-sim-python img {
+  /* width: 200px; */
+  object-fit: cover;
+}
+
+#logo-spatial-filtering img {
+  height: 100%;
+  object-fit: cover;
+}
+
 #logo-scout img {
   width: 185%;
   margin-left: -57%;

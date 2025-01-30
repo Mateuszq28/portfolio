@@ -256,6 +256,7 @@ nav .right a span {
 .skills_comment {
   margin-top: 30px;
   color: var(--link-color);
+  font-size: large;
 }
 
 /* SECTION 3: Projects */
